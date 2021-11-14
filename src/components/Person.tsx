@@ -5,7 +5,11 @@ interface Props {
   age: number;
   email: string;
 }
-
+enum HairColor {
+  Blonde = "Your color is blonde",
+  Brown = "Your color is brown",
+  Pink = "Your color is pink",
+}
 export const Person: FC<Props> = ({ name, age, email }: Props) => {
   const [country, setCountry] = useState<string | null>("");
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {

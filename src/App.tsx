@@ -1,7 +1,7 @@
-import React, { FC } from "react";
+import React, { FC, createContext } from "react";
 import "./App.css";
 import { Person, HairColor } from "./components/Person";
-
+const AppContext = createContext(null);
 const App: FC = () => {
   return (
     <div className="App">
@@ -11,7 +11,6 @@ const App: FC = () => {
         email="asdasd"
         hairColor={HairColor.Blonde}
       ></Person>
-      {console.log(HairColor.Blonde)}
     </div>
   );
 };

@@ -11,6 +11,7 @@ const App: FC = () => {
         email="asdasd"
         hairColor={HairColor.Blonde}
       ></Person>
+      {console.log(HairColor.Blonde)}
     </div>
   );
 };

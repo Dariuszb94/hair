@@ -11,7 +11,7 @@ export enum HairColor {
   Brown = "Your color is brown",
   Pink = "Your color is pink",
 }
-export const Person: FC<Props> = ({ name, age, email, hairColor }: Props) => {
+export const Person: FC<Props> = ({ name, age, email, hairColor }) => {
   const [country, setCountry] = useState<string | null>("");
   type NameType = "Darek" | "Radek";
   const nameForType: NameType = "Darek";
@@ -23,7 +23,7 @@ export const Person: FC<Props> = ({ name, age, email, hairColor }: Props) => {
       <h1>{name}</h1>
       <input type="text" placeholder="Your country" onChange={handleChange} />
       {country}
-      {HairColor}
+      {hairColor}
     </div>
   );
 };

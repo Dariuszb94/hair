@@ -6,7 +6,7 @@ interface IAppContext {
   age: number;
   country: string;
 }
-const AppContext = createContext<IAppContext | null>(null);
+export const AppContext = createContext<IAppContext | null>(null);
 const App: FC = () => {
   const contextValue: IAppContext = {
     name: "Darek",

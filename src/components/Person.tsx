@@ -1,5 +1,5 @@
-import React, { FC, useState, ChangeEvent } from "react";
-
+import React, { FC, useState, ChangeEvent, useContext } from "react";
+import { AppContext } from "../App";
 interface Props {
   name: string;
   age: number;
@@ -13,6 +13,7 @@ export enum HairColor {
 }
 export const Person: FC<Props> = ({ name, age, email, hairColor }) => {
   const [country, setCountry] = useState<string | null>("");
+  const name1 = useContext(AppContext);
   type NameType = "Darek" | "Radek";
   const nameForType: NameType = "Darek";
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -20,6 +21,7 @@ export const Person: FC<Props> = ({ name, age, email, hairColor }) => {
   };
   return (
     <div>
+      {console.log(name1)}
       <h1>{name}</h1>
       <input type="text" placeholder="Your country" onChange={handleChange} />
       {country}

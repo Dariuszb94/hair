@@ -10,7 +10,7 @@ export const AppContext = createContext<IAppContext | null>(null);
 const App: FC = () => {
   const contextValue: IAppContext = {
     name: "Darek",
-    age: 21,
+    age: 0,
     country: "Poland",
   };
   return (
